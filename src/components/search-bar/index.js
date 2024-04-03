@@ -22,7 +22,7 @@ function SearchBar() {
             .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
             .join(" ");
 
-          const response = await axios.get(`/search?product_name=${formattedQuery}`);
+          const response = await axios.get(`https://production-smokingcat.klocapps.com/search?product_name=${formattedQuery}`);
           setSearchResults(response.data);
         } catch (error) {
           console.error(error);
